@@ -1,11 +1,11 @@
-package atelier2.atelier22.jsfbeans;
+package Atelier2.jsfbeans;
 
 
+import Atelier2.persistence.Etudiant;
+import Atelier2.persistence.EtudiantDao;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
-import Atelier2.persistence.Etudiant;
-import Atelier2.persistence.EtudiantDao;
 
 import java.util.List;
 

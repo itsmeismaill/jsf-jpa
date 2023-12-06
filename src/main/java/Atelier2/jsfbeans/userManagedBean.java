@@ -1,54 +1,65 @@
 package Atelier2.jsfbeans;
 
 
-import Atelier2.persistence.Etudiant;
-import Atelier2.persistence.EtudiantDao;
+import Atelier2.persistence.*;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
 
+import java.io.IOException;
 import java.util.List;
 
 @Named
 @RequestScoped
-public class etudiantManagedBean {
+public class userManagedBean {
 
 
     // JPA Code injection
 
     @Inject
-    EtudiantDao etudiantDao ;
+    UserDao userDao ;
 
+    private Long id_user ;
 
-    private Long id_etudiant ;
+    private String username ;
+    private String email ;
 
-    private String nom ;
+    private String password ;
 
+    private List<Produit> produits ;
 
-    private Integer age ;
+    private PanierManagedBean panier ;
 
-    public Long getId_etudiant() {
-        return id_etudiant;
+    public Long getId_user() {
+        return id_user;
     }
 
-    public void setId_etudiant(Long id_etudiant) {
-        this.id_etudiant = id_etudiant;
+    public void setId_user(Long id_user) {
+        this.id_user = id_user;
     }
 
-    public String getNom() {
-        return nom;
+    public String getUsername() {
+        return username;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    public Integer getAge() {
-        return age;
+    public String getEmail() {
+        return email;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 
 
@@ -56,20 +67,28 @@ public class etudiantManagedBean {
 
     public void save(){
 
-        etudiantDao.save(new Etudiant( this.nom , this.age));
+        userDao.save(new User( this.username, this.email , this.password));
     }
 
-    public List<Etudiant> etudiants(){
+    public List<User> Users(){
 
-        return etudiantDao.getAll();
+        return userDao.getAll();
     }
 
 
     public void delete(Long id ){
 
-        etudiantDao.delete( etudiantDao.getOne(id) );
+        userDao.delete( userDao.getOne(id) );
     }
 
+    public void authenticate() throws IOException {
+        userDao.authenticate(this.username, this.password);
 
+        System.out.println("Authentication method called!");
+    }
+    public void addProduit(Produit produit) {
+        this.produits.add(produit);
+        panier.setProduits(this.produits);
+    }
 
 }

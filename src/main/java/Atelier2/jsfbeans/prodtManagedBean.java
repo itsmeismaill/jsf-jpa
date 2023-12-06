@@ -1,8 +1,9 @@
 package Atelier2.jsfbeans;
 
 
-import Atelier2.persistence.Etudiant;
-import Atelier2.persistence.EtudiantDao;
+
+import Atelier2.persistence.Prod;
+import Atelier2.persistence.ProdDao;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -11,28 +12,45 @@ import java.util.List;
 
 @Named
 @RequestScoped
-public class etudiantManagedBean {
+public class prodtManagedBean {
 
 
     // JPA Code injection
 
     @Inject
-    EtudiantDao etudiantDao ;
+    ProdDao prodDao ;
 
 
-    private Long id_etudiant ;
+    private Long id_prod ;
 
     private String nom ;
 
 
-    private Integer age ;
+    private Integer prix ;
+    private List<Prod> prods ;
 
-    public Long getId_etudiant() {
-        return id_etudiant;
+    public ProdDao getProdDao() {
+        return prodDao;
     }
 
-    public void setId_etudiant(Long id_etudiant) {
-        this.id_etudiant = id_etudiant;
+    public void setProdDao(ProdDao prodDao) {
+        this.prodDao = prodDao;
+    }
+
+    public List<Prod> getProds() {
+        return prods;
+    }
+
+    public void setProds(List<Prod> prods) {
+        this.prods = prods;
+    }
+
+    public Long getId_prod() {
+        return id_prod;
+    }
+
+    public void setId_prod(Long id_prod) {
+        this.id_prod = id_prod;
     }
 
     public String getNom() {
@@ -43,12 +61,12 @@ public class etudiantManagedBean {
         this.nom = nom;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getPrix() {
+        return prix;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setPrix(Integer prix) {
+        this.prix = prix;
     }
 
 
@@ -56,18 +74,18 @@ public class etudiantManagedBean {
 
     public void save(){
 
-        etudiantDao.save(new Etudiant( this.nom , this.age));
+        prodDao.save(new Prod( this.id_prod ,this.nom , this.prix));
     }
 
-    public List<Etudiant> etudiants(){
+    public List<Prod> prods(){
 
-        return etudiantDao.getAll();
+        return prodDao.getAll();
     }
 
 
     public void delete(Long id ){
 
-        etudiantDao.delete( etudiantDao.getOne(id) );
+        prodDao.delete( prodDao.getOne(id) );
     }
 
 

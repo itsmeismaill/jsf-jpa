@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="jsfJpaLSI:war exploded" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="56e10363-68f2-4e87-b1fa-a4f572f1de5a" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/HelloBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/HelloBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/YourJavaApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/YourJavaApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/PanierManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/PanierManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/etudiantManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/etudiantManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/prodtManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/prodtManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/produitManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/produitManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/userManagedBean.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/jsfbeans/userManagedBean.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Panier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Panier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/PanierDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/PanierDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/PanierDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/PanierDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Prod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Prod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProdDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProdDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProdDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProdDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Produit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/Produit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProduitDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProduitDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProduitDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/ProduitDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/UserDaoImp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Atelier2/persistence/UserDaoImp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/auth.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/auth.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/prod.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/prod.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/produit.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/produit.xhtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/user.xhtml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/user.xhtml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="jsf" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2Z8ZsPpvFQOzAJvfT0ojviBIs2W" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/pc/Desktop/jsfJpaLSI",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunDashboard">
+    <option name="configurationTypes">
+      <set>
+        <option value="Application" />
+      </set>
+    </option>
+    <option name="openRunningConfigInTab" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration name="JBoss/WildFly 23.0.0.Final" type="JBossConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="JBoss/WildFly 23.0.0.Final" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="jsfJpaLSI:war exploded">
+          <settings />
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="SERVER" />
+        <option name="BINDING_SET_NAME" value="" />
+        <option name="DOMAIN" value="false" />
+        <option name="SERVER_GROUP" value="main-server-group" />
+        <option name="USERNAME" value="" />
+        <option name="CREDENTIAL_ALIAS" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="JBoss" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="58308" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="jsfJpaLSI:war exploded" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56e10363-68f2-4e87-b1fa-a4f572f1de5a" name="Changes" comment="" />
+      <created>1701805878013</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1701805878013</updated>
+      <workItem from="1701805879289" duration="1139000" />
+      <workItem from="1701807070225" duration="2521000" />
+      <workItem from="1701810040240" duration="9468000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

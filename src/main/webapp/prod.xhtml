@@ -9,39 +9,39 @@
    <h:form>
 
       <h:outputText  value="NOM :"/>
-      <h:inputHidden  value="#{etudiantManagedBean.id_etudiant}" />
+      <h:inputHidden  value="#{prodtManagedBean.id_prod}" />
       <br/>
-      <h:outputText  value="AGE :"/>
-      <h:inputText value="#{etudiantManagedBean.nom}"  label="nom"/>
+      <h:outputText  value="Prix :"/>
+      <h:inputText value="#{prodtManagedBean.nom}"  label="nom"/>
       <br/>
-      <h:inputText  value="#{etudiantManagedBean.age}"  label="age"/>
+      <h:inputText  value="#{prodtManagedBean.prix}"  label="prix"/>
 
 
-      <h:commandButton value="save" action="#{etudiantManagedBean.save()}" />
+      <h:commandButton value="save" action="#{prodtManagedBean.save()}" />
 
       <br/>
 
 
-      <h:dataTable   value="#{etudiantManagedBean.etudiants()}" var="et" >
+      <h:dataTable   value="#{prodtManagedBean.prods()}" var="prd" >
 
          <h:column>
             <f:facet name="header">ID</f:facet>
-            <h:outputText value="#{et.id_etudiant}"/>
+            <h:outputText value="#{prd.id_prod}"/>
          </h:column>
 
          <h:column>
             <f:facet name="header">Nom</f:facet>
-            <h:outputText value="#{et.nom}"/>
+            <h:outputText value="#{prd.nom}"/>
          </h:column>
 
          <h:column>
-            <f:facet name="header">AGE</f:facet>
-            <h:outputText value="#{et.age}"/>
+            <f:facet name="header">Prix</f:facet>
+            <h:outputText value="#{prd.prix}"/>
          </h:column>
 
          <h:column>
             <f:facet name="header">Delelte</f:facet>
-            <h:commandLink value="delete"  actionListener="#{etudiantManagedBean.delete(et.id_etudiant)}"/>
+            <h:commandLink value="delete"  actionListener="#{prodtManagedBean.delete(prd.id_prod)}"/>
          </h:column>
 
 

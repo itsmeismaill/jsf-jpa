@@ -3,62 +3,63 @@ package Atelier2.persistence;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "etudiant")
-public class Etudiant {
+@Table(name = "panier")
+public class Panier {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_etudiant ;
+    private Long id_panier;
 
-    private String nom ;
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_user")
+    private User user;
 
-    public Etudiant() {
+    @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "id_prod")
+    private Prod prod;
+
+    public Panier() {
     }
+
+    public Long getId_panier() {
+        return id_panier;
+    }
+
+    public void setId_panier(Long id_panier) {
+        this.id_panier = id_panier;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Prod getProd() {
+        return prod;
+    }
+
+    public void setProd(Prod prod) {
+        this.prod = prod;
+    }
+
+    public Panier(User user, Prod prod) {
+        this.user = user;
+        this.prod = prod;
+    }
+
+    // Getters and setters
 
     @Override
     public String toString() {
-        return "Etudiant{" +
-                "id_etudiant=" + id_etudiant +
-                ", nom='" + nom + '\'' +
-                ", age=" + age +
+        return "Panier{" +
+                "id_panier=" + id_panier +
+                ", user=" + user +
+                ", prod=" + prod +
                 '}';
     }
 
-    private Integer age ;
-
-    public Etudiant(Long id_etudiant, String nom, Integer age) {
-        this.id_etudiant = id_etudiant;
-        this.nom = nom;
-        this.age = age;
-    }
-
-    public Etudiant( String nom, Integer age) {
-
-        this.nom = nom;
-        this.age = age;
-    }
-
-    public Long getId_etudiant() {
-        return id_etudiant;
-    }
-
-    public void setId_etudiant(Long id_etudiant) {
-        this.id_etudiant = id_etudiant;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
 }
+

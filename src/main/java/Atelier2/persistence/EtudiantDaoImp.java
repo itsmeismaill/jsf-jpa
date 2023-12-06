@@ -11,7 +11,7 @@ import java.util.List;
 
 @RequestScoped
 @ManagedBean
-public class ProdDaoImp implements ProdDao{
+public class EtudiantDaoImp implements EtudiantDao{
 
 
     EntityManagerFactory emf ;
@@ -21,7 +21,7 @@ public class ProdDaoImp implements ProdDao{
     Query query ;
 
 
-    public ProdDaoImp(){
+    public EtudiantDaoImp(){
         emf = Persistence.createEntityManagerFactory("default");
         em = emf.createEntityManager();
     }
@@ -29,36 +29,37 @@ public class ProdDaoImp implements ProdDao{
 
 
     @Override
-    public void save(Prod obejct) {
+    public void save(Etudiant obejct) {
 
         em.getTransaction().begin();
         em.persist(obejct);
         em.getTransaction().commit();
-    }
-
-    @Override
-    public void update(Prod obejct) {
 
     }
 
     @Override
-    public void delete(Prod obejct) {
+    public void update(Etudiant obejct) {
+
+    }
+
+    @Override
+    public void delete(Etudiant obejct) {
         em.getTransaction().begin();
         em.remove(obejct);
         em.getTransaction().commit();
     }
 
     @Override
-    public Prod getOne(Long id) {
+    public Etudiant getOne(Long id) {
 
-        query = em.createQuery( "select prod from Prod prod where prod.id_prod =:id") ;
+        query = em.createQuery( "select etudiant from Etudiant etudiant where etudiant.id_etudiant =:id") ;
         query.setParameter("id" , id);
-        return (Prod) query.getSingleResult();
+        return (Etudiant) query.getSingleResult();
     }
 
     @Override
-    public List<Prod> getAll() {
-        query = em.createQuery( "select prod from Prod prod") ;
+    public List<Etudiant> getAll() {
+        query = em.createQuery( "select etudiant from Etudiant etudiant") ;
         return query.getResultList();
     }
 }

@@ -1,4 +1,4 @@
-package ma.fstt.jsfjpalsi;
+package Atelier2;
 
 
 import jakarta.enterprise.context.RequestScoped;

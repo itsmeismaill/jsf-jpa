@@ -3,47 +3,62 @@ package Atelier2.persistence;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "etudiant")
-public class Etudiant {
+@Table(name = "prod")
+public class Prod {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id_etudiant ;
+    private Long id_prod ;
 
     private String nom ;
 
-    public Etudiant() {
+    private Integer prix ;
+
+    private Long id_panier ;
+
+    public void setPrix(Integer prix) {
+        this.prix = prix;
+    }
+
+    public Long getId_panier() {
+        return id_panier;
+    }
+
+    public void setId_panier(Long id_panier) {
+        this.id_panier = id_panier;
+    }
+
+    public Prod() {
     }
 
     @Override
     public String toString() {
         return "Etudiant{" +
-                "id_etudiant=" + id_etudiant +
+                "id_etudiant=" + id_prod +
                 ", nom='" + nom + '\'' +
-                ", age=" + age +
+                ", prix=" + prix +
                 '}';
     }
 
-    private Integer age ;
 
-    public Etudiant(Long id_etudiant, String nom, Integer age) {
-        this.id_etudiant = id_etudiant;
+    public Prod(Long id, String nom, Integer prix) {
+        this.id_prod = id;
         this.nom = nom;
-        this.age = age;
+        this.prix = prix;
     }
 
-    public Etudiant( String nom, Integer age) {
+    public Prod(String nom, Integer prix) {
 
         this.nom = nom;
-        this.age = age;
+        this.prix = prix;
     }
 
-    public Long getId_etudiant() {
-        return id_etudiant;
+    public Long getId_prod() {
+        return id_prod;
     }
 
-    public void setId_etudiant(Long id_etudiant) {
-        this.id_etudiant = id_etudiant;
+    public void setId_prod(Long id) {
+        this.id_prod = id;
     }
 
     public String getNom() {
@@ -54,11 +69,11 @@ public class Etudiant {
         this.nom = nom;
     }
 
-    public Integer getAge() {
-        return age;
+    public Integer getPrix() {
+        return prix;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setAge(Integer prix) {
+        this.prix = prix;
     }
 }

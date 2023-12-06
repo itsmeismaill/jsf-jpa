@@ -1,8 +1,7 @@
 package Atelier2.jsfbeans;
 
 
-import Atelier2.persistence.Etudiant;
-import Atelier2.persistence.EtudiantDao;
+import Atelier2.persistence.*;
 import jakarta.enterprise.context.RequestScoped;
 import jakarta.inject.Inject;
 import jakarta.inject.Named;
@@ -11,63 +10,67 @@ import java.util.List;
 
 @Named
 @RequestScoped
-public class etudiantManagedBean {
+public class PanierManagedBean {
 
 
     // JPA Code injection
 
     @Inject
-    EtudiantDao etudiantDao ;
+    PanierDao panierDao ;
 
+    private Long id_panier ;
 
-    private Long id_etudiant ;
+    private User user;
 
-    private String nom ;
+    private List<Produit> produits ;
 
-
-    private Integer age ;
-
-    public Long getId_etudiant() {
-        return id_etudiant;
+    public PanierDao getPanierDao() {
+        return panierDao;
     }
 
-    public void setId_etudiant(Long id_etudiant) {
-        this.id_etudiant = id_etudiant;
+    public void setPanierDao(PanierDao panierDao) {
+        this.panierDao = panierDao;
     }
 
-    public String getNom() {
-        return nom;
+    public Long getId_panier() {
+        return id_panier;
     }
 
-    public void setNom(String nom) {
-        this.nom = nom;
+    public void setId_panier(Long id_panier) {
+        this.id_panier = id_panier;
     }
 
-    public Integer getAge() {
-        return age;
+    public User getUser() {
+        return user;
     }
 
-    public void setAge(Integer age) {
-        this.age = age;
+    public void setUser(User user) {
+        this.user = user;
     }
 
+    public List<Produit> getProduits() {
+        return produits;
+    }
 
-    // actions
+    public void setProduits(List<Produit> produits) {
+        this.produits = produits;
+    }
+// actions
 
     public void save(){
 
-        etudiantDao.save(new Etudiant( this.nom , this.age));
+        panierDao.save(new Panier( this.user , (Prod) this.produits));
     }
 
-    public List<Etudiant> etudiants(){
+    public List<Panier> paniers(){
 
-        return etudiantDao.getAll();
+        return panierDao.getAll();
     }
 
 
     public void delete(Long id ){
 
-        etudiantDao.delete( etudiantDao.getOne(id) );
+        panierDao.delete( panierDao.getOne(id) );
     }
 
 

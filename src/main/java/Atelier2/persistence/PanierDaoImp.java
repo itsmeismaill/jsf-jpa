@@ -11,7 +11,7 @@ import java.util.List;
 
 @RequestScoped
 @ManagedBean
-public class EtudiantDaoImp implements EtudiantDao{
+public class PanierDaoImp implements PanierDao{
 
 
     EntityManagerFactory emf ;
@@ -21,7 +21,7 @@ public class EtudiantDaoImp implements EtudiantDao{
     Query query ;
 
 
-    public EtudiantDaoImp(){
+    public PanierDaoImp(){
         emf = Persistence.createEntityManagerFactory("default");
         em = emf.createEntityManager();
     }
@@ -29,36 +29,41 @@ public class EtudiantDaoImp implements EtudiantDao{
 
 
     @Override
-    public void save(Etudiant obejct) {
+    public void save(Panier obejct) {
 
         em.getTransaction().begin();
-        em.merge(obejct);
+        em.persist(obejct);
         em.getTransaction().commit();
     }
 
     @Override
-    public void update(Etudiant obejct) {
+    public void update(Panier obejct) {
 
     }
 
     @Override
-    public void delete(Etudiant obejct) {
+    public void delete(Panier obejct) {
         em.getTransaction().begin();
         em.remove(obejct);
         em.getTransaction().commit();
     }
 
     @Override
-    public Etudiant getOne(Long id) {
+    public Panier getOne(Long id) {
 
-        query = em.createQuery( "select etudiant from Etudiant etudiant where etudiant.id_etudiant =:id") ;
+        query = em.createQuery( "select panier from Panier panier where panier.user.id_user =:id") ;
         query.setParameter("id" , id);
-        return (Etudiant) query.getSingleResult();
+        return (Panier) query.getSingleResult();
     }
 
     @Override
-    public List<Etudiant> getAll() {
-        query = em.createQuery( "select etudiant from Etudiant etudiant") ;
+    public List<Panier> getAll() {
+        query = em.createQuery( "select panier from Panier panier") ;
+        return query.getResultList();
+    }
+    public List<Prod> getProuduits(Long id ) {
+        query = em.createQuery( "select prod from Prod prod where prod.id_panier =:id") ;
+        query.setParameter("id" , id);
         return query.getResultList();
     }
 }
